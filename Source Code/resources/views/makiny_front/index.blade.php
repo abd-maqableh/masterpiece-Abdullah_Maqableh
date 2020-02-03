@@ -63,54 +63,46 @@
                         </div>
 
                         <!-- start section posts  -->
-foreach($offer as $item)
-                        <div class="row">
+                        <div class="row" >
 
                             <!-- Start post rate  -->
-                            <div class="col-6 col-md-3">
+                            @foreach($offers as $offer)
 
-                                <div class="d-block d-md-flex listing vertical">
 
-                                    <a href="single/gaza/Gaza_wert_wrt_wadf.html" title="Gaza">
-                                        <img src="public/Admin/uploads/Place_image/6MQ2sM8eTr449WG4RMUXbXCuHtIB26300cTANjMi.jpg" alt="Gaza" style="width:100%" class="img d-block" title="Gaza">
+                            <div class="col-6 col-md-3"  >
+
+                                <div class="d-block d-md-flex listing vertical" >
+
+                                    <a href="single/gaza/Gaza_wert_wrt_wadf.html"  title="Gaza">
+                                        <img src=" uploads/   {{$offer->photo}}  " alt="Gaza" style="width:100%" class="img d-block" title="Gaza">
                                     </a>
                                     <div class="lh-content text-right">
-                                        <h3><a href="single/gaza/Gaza_wert_wrt_wadf.html" style="color: black" title="Gaza">Gaza</a></h3>
-                                        <a href="categories/alsydalyat/Gaza.html" class="category" title="الصيداليات"> الصيداليات </a>
-                                        <span class="category"> 24 ساعه </span>
+                                        <h3><a href="single/gaza/Gaza_wert_wrt_wadf.html" style="color: black" title="Gaza">{{$offer->name}}</a></h3>
+                                        <a href="#" class="category" title="الصيداليات"> {{$offer->location}} </a>
+                                        <span class="category">  {{$offer->price}} $ </span>
 
 
                                         <div class="tepcal">
-                                            <address>
-                                                <span> <i class="fa fa-map-marker"></i> wert , wrt , wadf </span>
-                                            </address>
 
-                                            <span style="font-size: 17px;"> <i class="fa fa-phone fa-rotate-270"></i> 3333</span>
+{{--                                            <span style="font-size: 17px;"> <i class="fa fa-phone fa-rotate-270"></i> {{$offer->mobile}}</span>--}}
                                             <br>
-                                            <span style="font-size: 17px;"> <i class="fa fa-clock-o"></i> منذ أسبوع </span>
+                                            <span style="font-size: 17px;"> <i class="fa fa-clock-o"></i> {{$offer->date}}</span>
                                         </div>
                                         <!-- start rating system  -->
-                                        <form action="https://makiny.com/rating/place" method="POST">
 
-                                            <input type="hidden" name="_token" value="7UmouZXwRc2fcBmRkhApELBoGYuFzy3LhzLWcUvL">
-
-                                            <div class="rating">
-
-                                                <input id="input-1" name="rate" class="rating rating-loading" data-min="0" data-max="5" data-step="1" value="4.2500" data-size="xs">
-
-                                                <input type="hidden" name="id" required="" value="27">
-
-                                                <button style="color: #fff; margin-top: -7px;" class="btn btn-success"> اضف تقيم</button>
-
-                                            </div>
-
-                                        </form>
 
                                         <!-- End rating system  -->
                                     </div>
                                 </div>
-@endforeach
-                                <!-- Grid column -->
+                            </div>
+                            <!-- End post rate  -->
+
+                            <!-- Start post rate  -->
+
+                            <!-- End post rate  -->
+                            @endforeach
+                        </div>
+                    </div>
 
 
 
@@ -392,6 +384,7 @@ foreach($offer as $item)
 
 
                                 <!-- End Section Categories -->
+
 
 
 

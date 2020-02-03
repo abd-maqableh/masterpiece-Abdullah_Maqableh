@@ -39,17 +39,7 @@ class OfferController extends Controller
      */
     public function store(Request $request)
     {
-     //  dd($request);
-//          $this->validate($request, [
-//                    'name'  => 'required',
-//                    'des'  => 'required',
-//                    'location'  => 'required',
-//                    'date'  => 'required',
-//                    'time'  => 'required',
-//                    'price'  => 'required',
-//                    'category_id' => 'required',
-//                ]);
-//        dd($request);
+
           Offer::create([
               'user_id'=>Auth::id(),
               'name'=> $request->input('name'),
@@ -65,7 +55,7 @@ class OfferController extends Controller
 
 //
 
-        return redirect()->route('category.index');
+        return redirect()->route('home');
 
     }
 
